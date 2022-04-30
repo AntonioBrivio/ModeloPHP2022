@@ -1,0 +1,6 @@
+Maria - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('ddddd', 'sfsf@dfsgg', '12345678Ab!', 'Admin') - 05/04/2022 - 13:21:35
+Maria - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('jkhkhkjhk', 'dfsd@fdhgfh', '4567890Ad#', 'Comum') - 05/04/2022 - 13:22:27
+Maria - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('nljljk', 'fgfgf@bbvb', 'sfhfhfhTy7@', 'Comum') - 05/04/2022 - 13:24:28
+Pedro - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('Asa', 'ddd@gggg', '12345678Ad@', 'Comum') - 05/04/2022 - 15:46:34
+Pedro - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('uuuuuu', 'tttt@ffffff', '3454665AAd#', 'Admin') - 05/04/2022 - 17:00:12
+Pedro - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('gjhjhjhj', 'dfgdgd@htfgh', 'gfgdfgfhf!56A', 'Comum') - 05/04/2022 - 17:01:49
