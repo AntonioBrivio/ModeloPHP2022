@@ -10,11 +10,39 @@ if($_SESSION['acesso']=="Admin"){
 //Faz a conexão com o BD.
 require 'conexao.php';
 
-//Cria o SQL (consulte tudo da tabela usuarios)
-$sql = "SELECT * FROM usuarios";
+//Lê a página que será exibida
+$id = $_GET["pag"];
+
+//Quantidade de registros a serem exibidos
+$total = 5;
+
+//Indica o registro limite para paginação
+if($id!=1){
+    $id = $id -1;
+    $id = $id * $total + 1;
+}
+
+$id--;
+
+//Cria o SQL com limites de página ordenado por id
+$sql = "SELECT * FROM usuarios ORDER BY id LIMIT $id, $total";
+
+//Conta a quantidade total de registros
+$sql1 = "SELECT count(*) as contagem FROM usuarios";
 
 //Executa o SQL
 $result = $conn->query($sql);
+$result1 = $conn->query($sql1);
+
+//Recupera o resultado da contagem
+$row1 = $result1->fetch_assoc();
+$contagem = $row1["contagem"];
+
+if($contagem%$total==0){
+    $contagem=$contagem/$total;
+}else{
+    $contagem=$contagem/$total + 1;    
+}
 
 	//Se a consulta tiver resultados
 	 if ($result->num_rows > 0) {
@@ -25,7 +53,7 @@ $result = $conn->query($sql);
 <title>Tela Principal</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/css/tabela.css">
+<link rel="stylesheet" href="./css/tabela.css">
 <style>
 * {
   box-sizing: border-box;
@@ -125,9 +153,15 @@ include 'menu.php';
 	?>
 				
 			</table>
-			<a href="usuariocadastrartela.php"><img src='./imagens/incluir.png' alt='Editar Usuário'></a>
 </div>
-
+<div class="pagination">
+    <?php for($i=1; $i <= $contagem; $i++) {
+            echo "<a href='usuarioscontrolar.php?pag=$i'>$i</a>";
+    } 
+	?>   
+</div>  
+            <a href="usuariocadastrartela.php"><img src="./imagens/incluir.png" alt="Incluir Usuário"></a>
+    </div>
 <div class="footer">
   <p>Projeto Final</p>
 </div>

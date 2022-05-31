@@ -105,8 +105,7 @@ li.dropdown {
 </div>
 
 <div class="content">
-  <h3>"Quem não segue com atenção os movimentos de sua própria alma, forçosamente será infeliz"</h3>
-  <p>Marco Aurélio, Meditações, Livro II, 8</p>
+ <h3>"As coisas não acontecem como a gente quer, nem mesmo como a gente não quer. As coisas nunca pedem a nossa opinião."</h3>
 </div>
 
 <div class="footer">

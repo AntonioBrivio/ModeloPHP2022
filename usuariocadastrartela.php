@@ -2,7 +2,7 @@
 <head>
 <title>Usuário Cadastrar</title>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="/css/estilo.css">
+<link rel="stylesheet" href="./css/estilo.css">
 </head>
 <body>
 <?php

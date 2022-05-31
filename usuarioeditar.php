@@ -21,7 +21,7 @@ if ($conn->query($sql) === TRUE) {
 } else {
   echo "Erro: " . $conn->error;
 }
-    header('Location: usuarioscontrolar.php'); //Redireciona para o form	
+    header('Location: usuarioscontrolar.php?pag=1'); //Redireciona para o form	
 
 //Fecha a conexão.
 	$conn->close();

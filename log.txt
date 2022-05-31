@@ -4,3 +4,9 @@ Maria - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('nljljk', 'fgfgf
 Pedro - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('Asa', 'ddd@gggg', '12345678Ad@', 'Comum') - 05/04/2022 - 15:46:34
 Pedro - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('uuuuuu', 'tttt@ffffff', '3454665AAd#', 'Admin') - 05/04/2022 - 17:00:12
 Pedro - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('gjhjhjhj', 'dfgdgd@htfgh', 'gfgdfgfhf!56A', 'Comum') - 05/04/2022 - 17:01:49
+Maria - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('aaaa', 'cursomundodosnegocios@gmail.com', '8Sm3U2bLCB7EVJc', 'Admin') - 02/05/2022 - 20:50:31
+Maria - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('hhhhhhhh', 'cusds@dsfd', '8Sm3U2bLCB7EVJc', 'Comum') - 02/05/2022 - 20:53:34
+Maria - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('gdfgdf', 'dfdhr@dfsdf', '8Sm3U2bLCB7EVJc', 'Admin') - 02/05/2022 - 20:53:54
+Maria - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('sfdfd', 'ddd@dcwdc', '8Sm3U2bLCB7EVJc', 'Comum') - 02/05/2022 - 20:56:04
+Maria - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('eu', 'eu@eu', '$2y$10$hnfmIVOhNugiA20bBwnuWeUEoaGCREDkhcB/TS7alpI99ylidOHzK', 'Admin') - 29/05/2022 - 22:46:30
+Maria - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('vc', 'vc@vc', '$2y$10$2wkLRkrqmn6hBbY4c.Rp7.56pPZC5CcPAx8IZW6MN2gCyLHOOwRFK', 'Admin') - 29/05/2022 - 22:51:47
