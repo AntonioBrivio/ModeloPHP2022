@@ -25,9 +25,9 @@ $result = $conn->query($sql);
 ?>	
 <html>
 <head>
-<title>Usuário Cadastrar</title>
+<title>Turma Cadastrar</title>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./css/estilo.css">
+<link rel="stylesheet" href="./css/form.css">
 </head>
 <body>		
 	<form action="turmacadastrarcodigo.php" method="post">
