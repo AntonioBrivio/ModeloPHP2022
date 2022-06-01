@@ -18,6 +18,9 @@ $sql = "UPDATE usuarios SET nome='" . $camponome . "', email='" . $campoemail . 
 //Executa o sql e faz tratamento de erro.
 if ($conn->query($sql) === TRUE) {
   echo "Registro atualizado.";
+  
+  include 'log.php';
+  
 } else {
   echo "Erro: " . $conn->error;
 }

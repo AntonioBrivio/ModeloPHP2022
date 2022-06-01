@@ -10,3 +10,12 @@ Maria - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('gdfgdf', 'dfdhr
 Maria - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('sfdfd', 'ddd@dcwdc', '8Sm3U2bLCB7EVJc', 'Comum') - 02/05/2022 - 20:56:04
 Maria - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('eu', 'eu@eu', '$2y$10$hnfmIVOhNugiA20bBwnuWeUEoaGCREDkhcB/TS7alpI99ylidOHzK', 'Admin') - 29/05/2022 - 22:46:30
 Maria - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('vc', 'vc@vc', '$2y$10$2wkLRkrqmn6hBbY4c.Rp7.56pPZC5CcPAx8IZW6MN2gCyLHOOwRFK', 'Admin') - 29/05/2022 - 22:51:47
+Maria - DELETE FROM usuarios WHERE id=5 - 31/05/2022 - 12:44:07
+Maria - DELETE FROM usuarios WHERE id=6 - 31/05/2022 - 12:44:10
+Maria - INSERT INTO usuarios(nome, email, senha, acesso) VALUES('aaaaa', 'xxx@xxx', '12345678!Aa', 'Comum') - 31/05/2022 - 12:45:29
+Maria - UPDATE usuarios SET nome='Marta', email='marta@gmail', acesso='Admin' WHERE id=3 - 31/05/2022 - 12:46:00
+Maria - UPDATE usuarios SET nome='Marcos', email='marcos@gmail', acesso='Admin' WHERE id=4 - 31/05/2022 - 12:46:07
+Maria - INSERT INTO turmas(numero, curso_id) VALUES(1111, 2) - 01/06/2022 - 12:37:43
+Maria - INSERT INTO turmas(numero, curso_id) VALUES(4444, 1) - 01/06/2022 - 13:41:32
+Maria - INSERT INTO turmas(numero, curso_id) VALUES(5555, 2) - 01/06/2022 - 13:41:47
+Maria - INSERT INTO turmas(numero, curso_id) VALUES(0, 2) - 01/06/2022 - 14:18:57

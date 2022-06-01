@@ -10,9 +10,9 @@ $campoacesso = $_POST["acesso"];
 
 //O EasyPHP não tem password_hash, por isso deixei as duas opções
 
-$camposenha = password_hash($_POST["senha"], PASSWORD_BCRYPT);
+//$camposenha = password_hash($_POST["senha"], PASSWORD_BCRYPT);
 
-//$camposenha = $_POST["senha"];       
+$camposenha = $_POST["senha"];       
 
 	
 //Faz a conexão com o BD.
@@ -26,18 +26,7 @@ if ($conn->query($sql) === TRUE) {
   header( "refresh:5;url=usuarioscontrolar.php?pag=1" );	
   echo "Gravado com sucesso.";
   
-  //Abre o arquivo log.txt, a opção "a" é para adicionar 
-  $log = fopen("log.txt", "a") or die("Não abriu");
-  
-  //Como será a String gravada no log
-  $txt = $_SESSION['nome'] . " - $sql - " . 
-  date("d/m/Y") . " - " . date("H:i:s") . "\n";
-
-  //Escreve a String no objeto que representa o arquivo
-  fwrite($log, $txt);
-  
-  //Fecha o objeto
-  fclose($log);
+include 'log.php';
 
 } else {
   header( "refresh:5;url=principal.php" );	

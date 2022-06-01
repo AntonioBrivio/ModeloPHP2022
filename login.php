@@ -21,9 +21,9 @@ $result = $conn->query($sql);
 	if ($result->num_rows > 0) {
 
 			//O EasyPHP não tem password_hash, por isso deixei as duas opções
-			$verificado = password_verify($camposenha, $row["Senha"]);
-			if($verificado){			
-			//if($camposenha == $row["Senha"]){
+			//$verificado = password_verify($camposenha, $row["Senha"]);
+			//if($verificado){			
+			if($camposenha == $row["Senha"]){
 				$_SESSION['nome'] = $row["Nome"];
 				$_SESSION['acesso'] = $row["Acesso"];
 				header('Location: principal.php');
