@@ -5,7 +5,7 @@ session_start();
 $logado = $_SESSION['nome'];
 
 //Verifica o acesso.
-if($_SESSION['acesso']=="Admin"){
+require 'acessoadm.php';
 
 //Faz a conexão com o BD.
 require 'conexao.php';
@@ -71,12 +71,19 @@ include 'menu.php';
 
 			<h1>Lista de Usuários</h1>
 			<table>
-<tr><th>Id</th><th>Nome</th><th>Email</th><th>Senha</th><th>Acesso</th><th colspan="2">Ações</td></tr>
+<tr><th>Id</th><th>Nome</th><th>Email</th><th>Senha</th><th>Acesso</th><th colspan="3">Ações</td></tr>
 				
 	<?php
 	  while($row = $result->fetch_assoc()) {
-		echo "<tr><td>" . $row["Id"] . "</td><td>" . $row["Nome"] . "</td><td>" . $row["Email"] . "</td><td>" . $row["Senha"] . "</td><td>" . $row["Acesso"] . "</td>";
-		echo "<td><a href='usuarioeditarform.php?id=" . $row["Id"] . "'><img src='./imagens/editar.png' alt='Editar Usuário'></a></td><td><a href='usuarioexcluir.php?id=" . $row["Id"] . "'><img src='./imagens/excluir.png' alt='Excluir Usuário'></a></td></tr>";
+	      if($row["Status"]=="inativo"){
+	          echo "<tr style='background-color:pink'>";
+	      }else{
+	          echo "<tr>";
+	      }
+	      
+	      
+		echo "<td>" . $row["Id"] . "</td><td>" . $row["Nome"] . "</td><td>" . $row["Email"] . "</td><td>" . $row["Senha"] . "</td><td>" . $row["Acesso"] . "</td>";
+		echo "<td><a href='usuarioeditarform.php?id=" . $row["Id"] . "'><img src='./imagens/editar.png' alt='Editar Usuário'></a></td><td><a href='usuariobloquear.php?id=" . $row["Id"] . "&status=" . $row["Status"] . "'><img src='./imagens/bloquear.png' alt='Bloquear Usuário'></a></td><td><a href='usuarioexcluir.php?id=" . $row["Id"] . "'><img src='./imagens/excluir.png' alt='Excluir Usuário'></a></td></tr>";
 	  }
 	?>
 				
@@ -106,8 +113,5 @@ include 'menu.php';
 	$conn->close();
 	
 //Se o usuário não usou o formulário
-} else {
-    header('Location: index.html'); //Redireciona para o form
-    exit; // Interrompe o Script
-}
+
 ?> 

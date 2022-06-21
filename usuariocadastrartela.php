@@ -8,7 +8,7 @@
 <?php
 session_start();
 //Só administrador pode acessar o programa.
-if($_SESSION['acesso']=="Admin"){
+require 'acessoadm.php';
 ?>
 	<form action="usuariocadastrarcodigo.php" method="post">
 	<h3>Cadastrar Usuários</h3>
@@ -19,11 +19,5 @@ if($_SESSION['acesso']=="Admin"){
 	<input type="radio" name="acesso" value="Admin"><label>Admin</label>	
 	<input type="submit" value="Enviar">
 	</form>
-<?php
-}else{
-    header('Location: index.html'); //Redireciona para o form
-    exit; // Interrompe o Script
-}
-?>
 </body>
 </html>

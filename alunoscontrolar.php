@@ -1,11 +1,11 @@
 <?php
 session_start();
 
+//Verifica se o usuário logou.
+require 'acessocomum.php';
+
 //Cria variáveis com a sessão.
 $logado = $_SESSION['nome'];
-
-//Verifica o acesso.
-if($_SESSION['acesso']=="Admin"){
 
 //Faz a conexão com o BD.
 require 'conexao.php';
@@ -19,13 +19,13 @@ $sql = "SELECT * FROM alunos where turma_id = $turma_id";
 //Executa o SQL
 $result = $conn->query($sql);
 
-	//Se a consulta tiver resultados
-	 if ($result->num_rows > 0) {
+//Se a consulta tiver resultados
+if ($result->num_rows > 0) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<title>Tela Principal</title>
+<title>Modelo PHP</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./css/tabela.css">
@@ -77,9 +77,5 @@ include 'menu.php';
 //Fecha a conexão.	
 	$conn->close();
 	
-//Se o usuário não usou o formulário
-} else {
-    header('Location: index.html'); //Redireciona para o form
-    exit; // Interrompe o Script
-}
+
 ?> 

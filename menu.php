@@ -11,7 +11,7 @@ if($_SESSION['acesso']=="Admin"){
   <li class="dropdown" style="float:right">
     <a href="javascript:void(0)" class="dropbtn">Usuário: <?php echo $logado;?></a>
     <div class="dropdown-content">
-      <a href="#">Alterar Dados</a>
+      <a href="usuarioeditarformcomum.php?id=<?php echo $_SESSION['id'] ?>">Alterar Dados</a>
       <a href="#">Alterar Senha</a>
       <a href="deslogar.php">Deslogar</a>
     </div>

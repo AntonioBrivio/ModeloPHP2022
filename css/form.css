@@ -35,7 +35,7 @@
 		padding: 50px;
 	}
 form input[type=text]:focus,
-form input[type=password]:focus ,
+form input[type=password]:focus,
 form input[type=email]:focus,
 form select:focus {
   background-color: lightblue;

@@ -1,7 +1,8 @@
  <?php
 session_start(); 
+
 //Verifica o acesso.
-if($_SESSION['acesso']=="Admin"){
+require 'acessoadm.php';
  
 //Faz a leitura do dado passado pelo link.
 $campoid = $_GET["id"];
@@ -26,9 +27,4 @@ if ($conn->query($sql) === TRUE) {
 //Fecha a conexão.
 $conn->close();
 
-//Se o usuário tem acesso
-} else {
-   header('Location: index.html'); //Redireciona para o form
-    exit; // Interrompe o Script
-}
 ?> 

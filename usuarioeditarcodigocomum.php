@@ -2,7 +2,7 @@
 session_start();
 
 //Verifica o acesso.
-require 'acessoadm.php';
+require 'acessocomum.php';
 
 //Dados do formulário
 $campoid = $_POST["id"];

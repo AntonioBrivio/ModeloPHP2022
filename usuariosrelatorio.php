@@ -1,15 +1,14 @@
 <?php
 session_start();
 
+//Verifica o acesso.
+require 'acessoadm.php';
+
 //Cria variáveis com a sessão.
 $logado = $_SESSION['nome'];
 
-//Verifica o acesso.
-if($_SESSION['acesso']=="Admin"){
-
 //Faz a conexão com o BD.
 require 'conexao.php';
-
 
 //Cria o SQL com limites de página ordenado por id
 $sql = "SELECT * FROM usuarios ORDER BY id";
@@ -40,6 +39,9 @@ if ($result->num_rows > 0) {
 <link rel="stylesheet" href="./css/tabela.css">
 <link rel="stylesheet" href="./css/menu.css">
 <link rel="stylesheet" href="./css/padrao.css">
+
+<script src="./scripts/filtrar.js"></script>
+
 </head>
 <body>
 
@@ -54,8 +56,12 @@ include 'menu.php';
 
 
 			<h1>Relatório de Usuários</h1>
-			<table>
-<tr><th>Id</th><th>Nome</th><th>Email</th><th>Acesso</th></tr>
+			
+			<input type="text" id="filtrarnomes" onkeyup="filtrar('filtrarnomes', 1)" placeholder="Busca de nomes">
+			<input type="text" id="filtraremails" onkeyup="filtrar('filtraremails', 2)" placeholder="Busca de emails">
+			
+			<table id="myTable">
+<tr><th>Id</th><th onclick="sortTable(1)">Nome</th><th>Email</th><th>Acesso</th></tr>
 				
 	<?php
 	  while($row = $result->fetch_assoc()) {
@@ -108,7 +114,7 @@ include 'menu.php';
 
 
 <div class="footer">
-  <p>Projeto Final</p>
+<?php require 'rodape.php'; ?>
 </div>
 
 </body>
@@ -122,9 +128,4 @@ include 'menu.php';
 //Fecha a conexão.	
 	$conn->close();
 	
-//Se o usuário não usou o formulário
-} else {
-    header('Location: index.html'); //Redireciona para o form
-    exit; // Interrompe o Script
-}
 ?> 

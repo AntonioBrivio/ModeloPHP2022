@@ -1,11 +1,11 @@
 <?php
 session_start();
 
+//Verifica se o usuário logou.
+require 'acessocomum.php';
+
 //Cria variáveis com a sessão.
 $logado = $_SESSION['nome'];
-
-//Verifica o acesso.
-if($_SESSION['acesso']=="Admin"){
 
 //Faz a conexão com o BD.
 require 'conexao.php';
@@ -24,7 +24,7 @@ $result1 = $conn->query($sql1);
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<title>Tela Principal</title>
+<title>Modelo PHP</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./css/tabela.css">
@@ -59,6 +59,7 @@ $cursos = array();
 				if($row["curso_id"] == $id){
 					echo "<tr><td>" . $row["id"] . "</td><td><a href='alunoscontrolar.php?turma=" . $row["id"] . "'>" . $row["numero"] . "</td><td>" . $nome . "</td>";
 					echo "<td><a href='turmaeditarform.php?id=" . $row["id"] . "'><img src='./imagens/editar.png' alt='Editar Turma'></a></td><td><a href='turmaexcluir.php?id=" . $row["id"] . "'><img src='./imagens/excluir.png' alt='Excluir Turma'></a></td></tr>";
+					
 				}
 			}
 		}
@@ -84,9 +85,4 @@ $cursos = array();
 //Fecha a conexão.	
 	$conn->close();
 	
-//Se o usuário não usou o formulário
-} else {
-    header('Location: index.html'); //Redireciona para o form
-    exit; // Interrompe o Script
-}
 ?> 

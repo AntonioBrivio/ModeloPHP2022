@@ -1,13 +1,8 @@
 <?php
 session_start();
+
 //Verifica se o usuário logou.
-if(!isset ($_SESSION['nome']) || !isset ($_SESSION['acesso']))
-{
-  unset($_SESSION['nome']);
-  unset($_SESSION['acesso']);
-  header('location:index.html');
-  exit;
-}
+require 'acessocomum.php';
 
 // Dados do Formulário
 $camponumero = intval($_POST["numero"]);
@@ -21,7 +16,7 @@ $sql = "INSERT INTO turmas(numero, curso_id) VALUES($camponumero, $campocurso_id
 
 //Executa o SQL e faz tratamento de erros
 if ($conn->query($sql) === TRUE) {
-  header( "refresh:5;url=turmascontrolar.php?pag=1" );	
+  header( "refresh:5;url=turmascontrolar.php" );	
   echo "Gravado com sucesso.";
   
 include 'log.php';

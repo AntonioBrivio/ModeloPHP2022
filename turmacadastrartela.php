@@ -1,13 +1,8 @@
 <?php
 session_start();
+
 //Verifica se o usuário logou.
-if(!isset ($_SESSION['nome']) || !isset ($_SESSION['acesso']))
-{
-  unset($_SESSION['nome']);
-  unset($_SESSION['acesso']);
-  header('location:index.html');
-  exit;
-}
+require 'acessocomum.php';
 
 //Cria variáveis com a sessão.
 $logado = $_SESSION['nome'];
@@ -25,7 +20,7 @@ $result = $conn->query($sql);
 ?>	
 <html>
 <head>
-<title>Turma Cadastrar</title>
+<title>Modelo PHP</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/form.css">
 </head>
@@ -33,7 +28,8 @@ $result = $conn->query($sql);
 	<form action="turmacadastrarcodigo.php" method="post">
 	<h3>Cadastrar Turma</h3>
 	<input type="text" name="numero" placeholder="Número da turma..." required>		
-	<select name='curso_id'>
+	<select name='curso_id' required>
+	<option value=""></option>
 <?php
 	 if ($result->num_rows > 0) {
 	  while($row = $result->fetch_assoc()) {			
