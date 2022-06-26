@@ -58,3 +58,5 @@ Maria - UPDATE usuarios SET Status='ativo' WHERE id=10 - 20/06/2022 - 16:00:04
 Maria - INSERT INTO usuarios(nome, email, senha, acesso, status) VALUES('dddd', 'cursomundodosnegocios@gmail.com', '12345678!Ab', 'Comum', 'ativo') - 20/06/2022 - 16:09:19
 Maria - UPDATE usuarios SET Status='inativo' WHERE id=2 - 20/06/2022 - 16:11:01
 Maria - UPDATE usuarios SET Status='inativo' WHERE id=4 - 20/06/2022 - 16:11:03
+Maria - INSERT INTO usuarios(nome, email, senha, acesso, status) VALUES('Zé', 'abrivio@gmail.com', '$2y$10$iFIsFDPbEsHuAULHpw6bFuwYzpS2euX6xRTzkqZV5mx4/MEEFg7QW', 'Comum', 'ativo') - 26/06/2022 - 15:31:40
+Maria - INSERT INTO usuarios(nome, email, senha, acesso, status, validador) VALUES('Zé3', 'abrivio@gmail.com', '$2y$10$EtZIQtZD4Cb0uuC1G3VB9Ooof0BpJ66lNSwyETOkAELPFKEXgzKXG', 'Admin', 'aguardando', 35454852) - 26/06/2022 - 16:03:32

@@ -71,7 +71,7 @@ include 'menu.php';
 
 			<h1>Lista de Usuários</h1>
 			<table>
-<tr><th>Id</th><th>Nome</th><th>Email</th><th>Senha</th><th>Acesso</th><th colspan="3">Ações</td></tr>
+<tr><th>Id</th><th>Nome</th><th>Email</th><th>Senha</th><th>Acesso</th><th>Status</th><th colspan="3">Ações</td></tr>
 				
 	<?php
 	  while($row = $result->fetch_assoc()) {
@@ -82,7 +82,7 @@ include 'menu.php';
 	      }
 	      
 	      
-		echo "<td>" . $row["Id"] . "</td><td>" . $row["Nome"] . "</td><td>" . $row["Email"] . "</td><td>" . $row["Senha"] . "</td><td>" . $row["Acesso"] . "</td>";
+		echo "<td>" . $row["Id"] . "</td><td>" . $row["Nome"] . "</td><td>" . $row["Email"] . "</td><td>" . $row["Senha"] . "</td><td>" . $row["Acesso"] . "</td><td>" . $row["Status"] . "</td>";
 		echo "<td><a href='usuarioeditarform.php?id=" . $row["Id"] . "'><img src='./imagens/editar.png' alt='Editar Usuário'></a></td><td><a href='usuariobloquear.php?id=" . $row["Id"] . "&status=" . $row["Status"] . "'><img src='./imagens/bloquear.png' alt='Bloquear Usuário'></a></td><td><a href='usuarioexcluir.php?id=" . $row["Id"] . "'><img src='./imagens/excluir.png' alt='Excluir Usuário'></a></td></tr>";
 	  }
 	?>
