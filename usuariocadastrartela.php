@@ -9,6 +9,16 @@
 session_start();
 //Só administrador pode acessar o programa.
 require 'acessoadm.php';
+
+	if(isset($_GET["erro"])){
+		if ($_GET["erro"]==1){
+			echo "<h2>Caracter Proibido</h2>";
+		}
+		if ($_GET["erro"]==2){
+			echo "<h2>Email já cadastrado</h2>";
+		}
+		
+	}
 ?>
 	<form action="usuariocadastrarcodigo.php" method="post">
 	<h3>Cadastrar Usuários</h3>

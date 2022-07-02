@@ -60,3 +60,18 @@ Maria - UPDATE usuarios SET Status='inativo' WHERE id=2 - 20/06/2022 - 16:11:01
 Maria - UPDATE usuarios SET Status='inativo' WHERE id=4 - 20/06/2022 - 16:11:03
 Maria - INSERT INTO usuarios(nome, email, senha, acesso, status) VALUES('Zé', 'abrivio@gmail.com', '$2y$10$iFIsFDPbEsHuAULHpw6bFuwYzpS2euX6xRTzkqZV5mx4/MEEFg7QW', 'Comum', 'ativo') - 26/06/2022 - 15:31:40
 Maria - INSERT INTO usuarios(nome, email, senha, acesso, status, validador) VALUES('Zé3', 'abrivio@gmail.com', '$2y$10$EtZIQtZD4Cb0uuC1G3VB9Ooof0BpJ66lNSwyETOkAELPFKEXgzKXG', 'Admin', 'aguardando', 35454852) - 26/06/2022 - 16:03:32
+Maria - UPDATE usuarios SET Status='ativo' WHERE id=2 - 02/07/2022 - 18:23:54
+Maria - UPDATE usuarios SET Status='inativo' WHERE id=2 - 02/07/2022 - 18:23:56
+Maria - UPDATE usuarios SET Status='ativo' WHERE id=14 - 02/07/2022 - 18:59:02
+Maria - UPDATE usuarios SET Status='ativo' WHERE id=4 - 02/07/2022 - 18:59:06
+Maria - UPDATE usuarios SET Status='ativo' WHERE id=15 - 02/07/2022 - 18:59:13
+Maria - UPDATE usuarios SET Status='inativo' WHERE id=12 - 02/07/2022 - 18:59:22
+Maria - UPDATE usuarios SET Status='inativo' WHERE id=2 - 02/07/2022 - 18:59:26
+Maria - UPDATE usuarios SET Status='ativo' WHERE id=2 - 02/07/2022 - 18:59:27
+Maria - UPDATE usuarios SET Status='inativo' WHERE id=4 - 02/07/2022 - 18:59:28
+Maria - UPDATE usuarios SET Status='ativo' WHERE id=4 - 02/07/2022 - 18:59:29
+Maria - UPDATE usuarios SET Status='ativo' WHERE id=13 - 02/07/2022 - 18:59:36
+Maria - UPDATE usuarios SET Status='inativo' WHERE id=13 - 02/07/2022 - 18:59:42
+Maria - UPDATE usuarios SET nome='Zero aaa', email='ddd@ddd.COM', acesso='Admin' WHERE id=12 - 02/07/2022 - 19:03:28
+Maria - DELETE FROM usuarios WHERE id=13 - 02/07/2022 - 19:06:09
+Maria - INSERT INTO turmas(numero, curso_id) VALUES(212, 2) - 02/07/2022 - 19:06:54

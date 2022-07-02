@@ -5,10 +5,10 @@ session_start();
 require 'acessoadm.php';
 
 //Dados do formulário
-$campoid = $_POST["id"];
-$camponome = $_POST["nome"];
-$campoemail = $_POST["email"];
-$campoacesso = $_POST["acesso"];
+$campoid = filter_input(INPUT_POST, 'id');
+$camponome = filter_input(INPUT_POST, 'nome');
+$campoemail = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+$campoacesso = filter_input(INPUT_POST, 'acesso');
 
 //Faz a conexão com o BD.
 require 'conexao.php';

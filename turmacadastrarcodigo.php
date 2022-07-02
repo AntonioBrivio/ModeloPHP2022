@@ -5,8 +5,8 @@ session_start();
 require 'acessocomum.php';
 
 // Dados do Formulário
-$camponumero = intval($_POST["numero"]);
-$campocurso_id = intval($_POST["curso_id"]);    
+$camponumero = intval(filter_input(INPUT_POST, 'numero'));
+$campocurso_id = intval(filter_input(INPUT_POST, 'curso_id'));    
 	
 //Faz a conexão com o BD.
 require 'conexao.php';

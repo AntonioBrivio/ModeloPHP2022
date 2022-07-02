@@ -1,9 +1,14 @@
 <?php
 session_start();
-if (isset($_POST['senha'])){
+//Se o usuário não usou o formulário
+if (!isset($_POST['senha'])){
+    header('Location: index.html'); //Redireciona para o form
+    exit; // Interrompe o Script
+}
+
 // Dados do Formulário
-$campoemail = $_POST["email"];
-$camposenha = $_POST["senha"];
+$campoemail = filter_input(INPUT_POST, 'email');
+$camposenha = filter_input(INPUT_POST, 'senha');
 
 //Faz a conexão com o BD.
 require 'conexao.php';
@@ -30,20 +35,15 @@ $result = $conn->query($sql);
 				header('Location: principal.php');
 				exit;
 			}else{
-			  header( "refresh:5;url=index.html" );
-				echo "<br>" . 'Senha Errada';  
+			//Senha errada	
+			  header( "refresh:5;url=index.html" ); 
 				exit;  
 			}
-	//Se a consulta não tiver resultados  			
+	//Email não existe na base. 			
 	} else {
 		header('Location: index.html'); //Redireciona para o form
 		exit; // Interrompe o Script
 	}
-//Se o usuário não usou o formulário
-} else {
-    header('Location: index.html'); //Redireciona para o form
-    exit; // Interrompe o Script
-}
 
 //Fecha a conexão.
 $conn->close();

@@ -5,8 +5,8 @@ session_start();
 require 'acessoadm.php';
  
 //Faz a leitura do dado passado pelo link.
-$campoid = $_GET["id"];
-$campostatus = $_GET["status"];
+$campoid = filter_input(INPUT_GET, 'id');
+$campostatus = filter_input(INPUT_GET, 'status');
  
 //Faz a conexão com o BD.
 require 'conexao.php';

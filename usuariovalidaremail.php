@@ -2,8 +2,8 @@
 session_start();
 
 //Dados do formulário
-$campoemail = $_GET["id"];
-$validador = $_GET["validador"];
+$campoemail = filter_input(INPUT_GET, 'id');
+$validador = filter_input(INPUT_GET, 'validador');
 
 //Faz a conexão com o BD.
 require 'conexao.php';

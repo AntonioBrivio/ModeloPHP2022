@@ -11,7 +11,7 @@ $logado = $_SESSION['nome'];
 require 'conexao.php';
 
 //Lê a página que será exibida
-$turma_id = $_GET["turma"];
+$turma_id = $camponome = filter_input(INPUT_GET, 'turma');;
 
 //Cria o SQL com limites de página ordenado por id
 $sql = "SELECT * FROM alunos where turma_id = $turma_id";
