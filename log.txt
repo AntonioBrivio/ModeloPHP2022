@@ -75,3 +75,17 @@ Maria - UPDATE usuarios SET Status='inativo' WHERE id=13 - 02/07/2022 - 18:59:42
 Maria - UPDATE usuarios SET nome='Zero aaa', email='ddd@ddd.COM', acesso='Admin' WHERE id=12 - 02/07/2022 - 19:03:28
 Maria - DELETE FROM usuarios WHERE id=13 - 02/07/2022 - 19:06:09
 Maria - INSERT INTO turmas(numero, curso_id) VALUES(212, 2) - 02/07/2022 - 19:06:54
+Maria - INSERT INTO mensagens(remetente, destinatario, assunto, texto) 
+        VALUES('1', '6', 'opa', 'jjjjjjj') - 03/07/2022 - 21:19:20
+Maria - INSERT INTO mensagens(remetente, destinatario, assunto, texto) 
+        VALUES('1', '6', 'kkkkkk', 'bbbbnnnnvvv') - 03/07/2022 - 21:35:50
+Maria - INSERT INTO mensagens(remetente, destinatario, assunto, texto) 
+        VALUES('1', '6', 'oooooooooo', 'chghvg hhhbj knjnk') - 03/07/2022 - 21:36:22
+Maria - INSERT INTO mensagens(remetente, destinatario, assunto, texto) 
+        VALUES('1', '10', 'oo km ', 'jnkjn  kk   mkmk') - 03/07/2022 - 21:36:46
+Maria - INSERT INTO mensagens(remetente, destinatario, assunto, texto) 
+        VALUES('1', '10', 'ddf vgv', 'bhbjh h j  j') - 03/07/2022 - 21:36:59
+Maria - INSERT INTO mensagens(remetente, destinatario, assunto, texto) 
+        VALUES('1', '3', 'nnk mm ', 'hb jhbh  j ') - 03/07/2022 - 21:37:36
+Maria - INSERT INTO mensagens(remetente, destinatario, assunto, texto) 
+        VALUES('1', '6', 'hjjj ', 'bknn k lk ') - 03/07/2022 - 21:37:50

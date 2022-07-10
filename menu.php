@@ -1,6 +1,8 @@
 <ul>
   <li><a href="principal.php">Principal</a></li>
-   <li><a href="turmascontrolar.php">Turmas</a></li>
+  <li><a href="turmascontrolar.php">Turmas</a></li>
+  <li><a href="turmascontrolarjoin.php">Turmas Join</a></li>
+  <li><a href="eventoscontrolar.html">Eventos</a></li>
 <?php 
 //Menu só aparece para os administradores.
 if($_SESSION['acesso']=="Admin"){
@@ -11,8 +13,9 @@ if($_SESSION['acesso']=="Admin"){
   <li class="dropdown" style="float:right">
     <a href="javascript:void(0)" class="dropbtn">Usuário: <?php echo $logado;?></a>
     <div class="dropdown-content">
-      <a href="usuarioeditarformcomum.php?id=<?php echo $_SESSION['id'] ?>">Alterar Dados</a>
+      <a href="usuarioeditarformcomum.php">Alterar Dados</a>
       <a href="#">Alterar Senha</a>
+      <a href="mensagemcadastrartela.php">Mensagens</a>
       <a href="deslogar.php">Deslogar</a>
     </div>
   </li>

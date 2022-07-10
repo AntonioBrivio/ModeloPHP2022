@@ -31,7 +31,8 @@ $result = $conn->query($sql);
 			//if($camposenha == $row["Senha"]){
 				$_SESSION['nome'] = $row["Nome"];
 				$_SESSION['acesso'] = $row["Acesso"];
-				$_SESSION['id'] = $row["Id"];				
+				$_SESSION['id'] = $row["Id"];
+				$_SESSION['email'] = $row["Email"];				
 				header('Location: principal.php');
 				exit;
 			}else{
